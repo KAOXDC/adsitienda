@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block titulo %}	
+	<title>Agregar producto</title>
+{% endblock %}	
+
+
+{% block content %}	
+	<h1>{{msj}}</h1>
+	<a href="/lista_productos">regresar a la lista de productos</a>
+
+	<h2>agregar producto</h2>
+	<form method="POST" action="" enctype="multipart/formdata">
+		{% csrf_token %}
+		{{formulario.as_p}}
+		<input type="submit" name="Guardar">
+	</form>
+{% endblock %}	
+
+

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block titulo %}	
+	<title>lista de productos</title>
+{% endblock %}	
+
+{% block content %}	
+	<h2>lista de productos</h2>
+	<a href="/agregar_productos/">Agregar Producto</a>
+	<a href="">Agregar Producto</a>
+	{% for p in productos %}
+		<p>
+			{{ p.nombre }}			
+			{{ p.stock }}			
+			{{ p.precio }}
+			{{ p.marca }}
+			<img src="/media/{{ p.foto }}">
+			
+			<a href="/ver_producto/{{ p.id }}"> Ver detalle</a>
+			<a href="/editar_producto/{{ p.id }}"> Editar </a>
+			<a href="/eliminar_producto/{{ p.id }}"> Eliminar </a>
+		</p>
+	{% endfor %}
+{% endblock %}	
+

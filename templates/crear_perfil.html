@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block titulo %}
+{% endblock %}
+
+
+{% block content %}
+
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form_1.as_p }}		
+		{{ form_2.as_p }}		
+		<input type="submit" name="Crear Perfil">
+	</form>
+{% endblock %}

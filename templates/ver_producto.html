@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+	ver producto
+{% endblock %}
+
+{% block content %}
+	<h1>Ver detalle producto</h1>
+	<h2>
+		{{ p.id }}
+		{{ p.nombre }}
+		{{ p.categorias }}
+	</h2>
+		{% for c in p.categorias.all %}
+			<p> {{c}} </p>	
+		{% endfor %}
+
+{% endblock %}
